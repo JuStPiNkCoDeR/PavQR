@@ -1,0 +1,2 @@
+An error occurred while sending Email.
+We are unable to send you message, try to reload the page.

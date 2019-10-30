@@ -1,0 +1,11 @@
+#!/usr/bin/nodejs
+var app = require('../app');
+const config = require('../config');
+const log = require('../libs/log');
+const logstr = require('../libs/log').stream;
+
+app.set('port', config.get('port'));
+
+var server = app.listen(app.get('port'), function() {
+  logstr.write('info', 'Express server listening on port ' + config.get('port'));
+});

@@ -1,0 +1,110 @@
+{
+  "port": 1235,
+  "version": "0.0.1",
+  "languages": {
+    "ru-RU": {
+      "errors": {
+        "connectToDB": "/home/pinkcoder/Projects/Hackothon/web/data/ru/errors/СоединениеБД.txt"
+      },
+      "warnings": {
+
+      }
+    },
+    "en-EN": {
+      "errors": {
+        "readFile": "/home/pinkcoder/Projects/Hackothon/web/data/en/errors/readFile.txt",
+        "readForm": "/home/pinkcoder/Projects/Hackothon/web/data/en/errors/readForm.txt",
+        "sendMail": "/home/pinkcoder/Projects/Hackothon/web/data/en/errors/sendMail.txt",
+        "saveDB": "/home/pinkcoder/Projects/Hackothon/web/data/en/errors/saveDB.txt"
+      },
+      "warnings": {
+
+      },
+      "htmlData": {
+        "index": "/home/pinkcoder/Projects/Hackothon/web/data/en/index/index.json"
+      }
+    }
+  },
+  "variables": {
+    "NODE_ENV": "development",
+    "NEWS": {
+
+    },
+    "DATE": {
+      "format": {
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric",
+        "weekday": "long",
+        "timezone": "UTC",
+        "hour": "numeric",
+        "minute": "numeric",
+        "second": "numeric"
+      }
+    }
+  },
+  "mongoose": {
+    "databases": {
+      "uri": "mongodb://127.0.0.1:27017/test"
+    },
+    "normalUser": {
+      "user": "normalUser",
+      "pass": "F3io!Dq]1[05lA7",
+      "useNewUrlParser": true
+    },
+    "guestUser": {
+      "user": "guestUser",
+      "pass": "SgA!?0Cab7qioQdZO3i1S",
+      "useNewUrlParser": true
+    }
+  },
+  "winston": {
+    "infoPath": "/home/pinkcoder/Projects/Hackothon/web/logs/all.log",
+    "warningPath": "/home/pinkcoder/Projects/Hackothon/web/logs/warnings.log",
+    "errorPath": "/home/pinkcoder/Projects/Hackothon/web/logs/errors.log"
+  },
+  "encryption": {
+    "options": {
+      "N2E": {
+        "type": 0
+      },
+      "E2N": {
+        "encoding": "utf-8"
+      }
+    }
+  },
+  "formidable": {
+    "options": {
+      "encoding": "utf-8",
+      "multiples": true
+    }
+  },
+  "security": {
+
+  },
+  "session": {
+    "secret": "HeReIsSoMeSeCrEt",
+    "key": "HeReIsSoMeKeY",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "test": {
+    "path": "/home/pinkcoder/Projects/Web/kv/tests/"
+  },
+  "mail": {
+    "options": {
+      "from": "no-reply@PavQR.kz",
+      "host": "localhost:1235",
+      "secureConnection": false,
+      "port": 465,
+      "transportMethod": "SMTP",
+      "auth": {
+        "user": "sasha.los.0148@gmail.com",
+        "pass": "korolq120201S"
+      }
+    }
+  }
+}
