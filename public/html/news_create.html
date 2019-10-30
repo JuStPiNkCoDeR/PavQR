@@ -1,0 +1,21 @@
+<div class="form-block">
+    <form name="newsGen" action="" method="post" enctype="multipart/form-data">
+        <label for="header">Заголовок:<input type="text" name="topic" id="header" placeholder="Ввести заголовок..."></label>
+        <label for="content">Текст:<textarea id="content" name="text" placeholder="Ввести новость..."></textarea></label>
+        <label for="source">Источник:<input type="text" name="src" id="source" placeholder="Ввести источник..."></label>
+        <label for="images">Изображение:<input type="file" name="img" id="images"></label>
+        <button id="finish-news">Отправить</button>
+    </form>
+</div>
+<script>
+    $("button").click(function (e) {
+        e.preventDefault();
+        const data = new FormData(document.forms.newsGen);
+        const sub = new Link('/cl/finish-news', data);
+        sub.send(function () {
+            if (this.readyState !== 4) return;
+            var ans = JSON.parse(this.responseText);
+            $('body').append(ans.answer.html);
+        });
+    })
+</script>

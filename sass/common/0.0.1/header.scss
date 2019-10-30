@@ -1,0 +1,102 @@
+/************** 0.0.1 **************/
+header {
+  width: 100vw;
+  height: $headerHeight;
+  background: $back;
+  border-bottom: 1px solid $white;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      line-height: $headerHeight - 1;
+      transition: $mostlyDuration;
+      margin: 0;
+      color: $white;
+      &:hover{
+        cursor: pointer;
+      }
+      label {
+        display: block;
+        width: 100%;
+        &:after {
+          @extend %fa-icon;
+          @extend .fas;
+          content: fa-content($fa-var-sort-down);
+          font-size: $iconsSize;
+          color: inherit;
+          transform: translateY(-5px);
+        }
+        &:hover {
+          cursor: inherit;
+          color: $white;
+          &:after{
+            cursor: inherit;
+            color: $orange;
+          }
+        }
+        select {
+          @include appearance(none, '');
+          background: transparent;
+          border: none;
+          color: inherit;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          position: relative;
+          z-index: 2;
+          &:hover{
+            cursor: inherit;
+            color: $white;
+          }
+          option{
+            background: $orange;
+          }
+        }
+      }
+    }
+    &#lang {
+      @include flex(flex, flex-start, center);
+      li {
+        padding: $headerPad1;
+        &:first-child{
+          background: $orange;
+        }
+      }
+    }
+    &#infoSign {
+      @include flex(flex, flex-end, center);
+      li {
+        padding: $headerPad2;
+        border-left: 1px solid $white;
+        &:first-child{
+          border-left-color: $orange;
+        }
+        &:nth-child(2){
+          border-left-color: $orange;
+        }
+        &:nth-child(4):before{
+          @extend %fa-icon;
+          @extend .fas;
+          content: fa-content($fa-var-sign-in-alt);
+        }
+        &:last-child:before{
+          @extend %fa-icon;
+          @extend .fas;
+          content: fa-content($fa-var-user-plus);
+        }
+        &:before{
+          font-size: $iconsSize - 5;
+          transform: translateX(-40%);
+        }
+        &:hover{
+          color: $orange;
+        }
+        &.clicked{
+          color: $white;
+          background: $orange;
+        }
+      }
+    }
+  }
+}

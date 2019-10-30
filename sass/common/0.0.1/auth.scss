@@ -1,0 +1,73 @@
+form {
+  width: 70%;
+  margin: 30% auto 0;
+  padding: $formPadding;
+  border: 3px solid #000;
+  background: $main-colour1;
+  -webkit-border-radius: $bdrs;
+  -moz-border-radius: $bdrs;
+  border-radius: $bdrs;
+  color: $black;
+  label {
+    display: block;
+    text-align: center;
+    margin: $labelBottom;
+    input {
+      display: block;
+      width: $inputWidth;
+      margin: $inputMargin;
+      padding: $inputPadding;
+      border: 2px solid $black;
+      -webkit-border-radius: $bdrs;
+      -moz-border-radius: $bdrs;
+      border-radius: $bdrs;
+      background: $alto2-colour1;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    .file-up-field {
+      @extend %fa-icon;
+      @extend .far;
+      display: block;
+      margin: $inputMargin;
+      width: $inputWidth;
+      font-size: 12px;
+      background: #E9E6E6;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      padding: 10px 7px;
+      border: 2px dashed;
+      transition: $mostlyDuration;
+      &:after {
+        display: block;
+        margin-top: 5%;
+        font-size: 4em;
+        content: fa-content($fa-var-file-alt);
+      }
+      &.hover {
+        background: #cecece;
+      }
+      &.dropped {
+        background: #444;
+      }
+    }
+  }
+  button {
+    display: block;
+    width: $buttonWidth;
+    margin: 0 auto;
+    padding: $inputPadding;
+    background: $alto2-colour1;
+    border: 2px solid $black;
+    -webkit-border-radius: $bdrs;
+    -moz-border-radius: $bdrs;
+    border-radius: $bdrs;
+    transition: $mostlyDuration;
+    &:hover {
+      background: $alto1-colour1;
+      cursor: pointer;
+    }
+  }
+}

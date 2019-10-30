@@ -1,0 +1,21 @@
+/************** 0.0.1 **************/
+@import '../../common/libs/0.0.1/vars';
+@import "../../common/icons/sass/fontawesome";
+@import "../../common/icons/sass/solid";
+@import "../../common/0.0.1/header";
+@import "../../common/0.0.1/camera";
+@import "../../common/0.0.1/answer";
+
+body {
+  margin: 0;
+  background: $back;
+  color: $casual-colour;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $bold;
+  overflow-x: hidden;
+}
+
+.camera-field{
+  margin-top: 7vh;
+}

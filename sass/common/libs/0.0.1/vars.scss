@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=cyrillic');
+/******** COLOUR SCHEMA *********/
+$maincl: #616161;
+$secondcl: #909090;
+$black: #191919;
+$white: #fff;
+$orange: #ff8f29;
+$back: url('../../../img/bg.png');
+/******** END COLOUR SCHEMA *********/
+
+/******** MOSTLY BLOCKS *********/
+$bdrs: 30px;
+$headerHeight: 60px;
+$headerPad1: 0 6%;
+$headerPad2: 0 4%;
+/******** END MOSTLY BLOCKS *********/
+
+/******** TEXT *********/
+$fontFamily: 'Roboto Slab', serif;
+$bold: 700;
+$fontSize: 14px;
+$headerText: 18px;
+$casual-colour: $white;
+$iconsSize: 25px;
+/******** END TEXT *********/
+
+/******** FORMS *********/
+$inputPadding: 5px 7px;
+$inputMargin: 7px auto 0;
+$labelBottom: 0 auto 15px;
+$inputWidth: 100%;
+$formPadding: 20px 22px;
+$buttonWidth: 50%;
+/******** END FORMS *********/
+
+/******** ANIMATIONS *********/
+$hoverBack: #2c2b2b;
+$mostlyDuration: 0.3s;
+/******** END ANIMATIONS *********/
+
+/******** MIXINS *********/
+@mixin flex($val, $hor, $ver) {
+  display: $val;
+  display: -webkit-$val;
+  justify-content: $hor;
+  align-items: $ver;
+}
+@mixin appearance($val, $txt) {
+  -webkit-appearance: $val;
+  -moz-appearance: $val;
+  -o-text-overflow: $txt;
+  text-overflow: $txt;
+  -ms-appearance: $val;
+  appearance: $val !important;
+}
+/******** END MIXINS *********/
+
+/******** LEGACY *********/
+
+/******** END LEGACY *********/

@@ -1,0 +1,39 @@
+/************** 0.0.1 **************/
+.info{
+  border-right: 1px solid $white;
+  .img-block{
+    text-align: center;
+    img{
+      width: 90%;
+    }
+  }
+  .text-block{
+    width: 100%;
+    p{
+      padding: $headerPad1;
+      font-weight: 700;
+      font-size: 16px;
+      span{
+        font-weight: 400;
+      }
+    }
+    p:first-child{
+      text-align: center;
+    }
+    .info-text{
+      @include flex(flex, space-between, center);
+    }
+  }
+}
+#player1 {
+  height: 250px !important;
+  .ymaps-2-1-69-panorama-screen{
+    display: none;
+  }
+  .ymaps-2-1-69-panorama-screen:first-child{
+    display: block;
+  }
+}
+#name {
+  text-align: center;
+}
